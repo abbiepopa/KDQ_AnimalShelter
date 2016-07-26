@@ -115,6 +115,13 @@ mod3<-multinom(OutcomeType~pit + sex + status + ordinalage + colorgrp1, data=dog
 
 dog$prediction<-predict(mod2, dog)
 
+dog$match<-"no"
+dog[which(dog$prediction == dog$OutcomeType), "match"]<- "yes"
+
+length(which(dog$match == "yes"))/15595
+
+length(which(dog$OutcomeType == "Adoption"))/15595
+
 ###now do the cats!!
 ###cat pure versus mix
 cat$pure<-"yes"
