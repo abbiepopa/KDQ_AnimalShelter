@@ -36,3 +36,9 @@ Note that an ideal confusion matrix will have the heaviest weights along the dia
 Notice how age allows our model to predict a far richer set of outcomes than the other factors alone.
 <br><br>
 Advice I would give a shelter based on this model. First, as I have already stated, is the value of finding a way to get pit bulls adopted. This could include education for owners to destigmatize the pit bulls, or obedience training for the dogs themselves. Second, since spayed and neutered animals are more likely to be adopted investing in spaying and neutering programs for the animals would be a worthwhile endeavor. If it results in more adoptions the costs could ultimately save the shelter money, as they would make more money in adoption fees. Finally, it would be so helpful for the shelter to find some way to move the elderly animals. I wonder if certain demographics of people (older individuals) would also be interested in older, more mellow dogs. 
+<br><br>
+As a final note, splitting the data into dogs and cats allowed for an obvious test of my initial hypothesis, which was that dogs and cats would require different models for good prediction power. A quick confusion matrix when applying this method to cats (though cats could only be classified as mutt or pure bred, not pit bulls) yields this:
+<br><br>
+//cat matrix
+<br><br>
+There is definitely explanatory power lacking when applying the dog model to cats. In the future, I will need to build an appropriate model for predicting outcomes of cats. This is also relevant to shelters, in that they should not assume that dogs and cats are similar. For example, it may be that older cats don't suffer as much as older dogs. This remains to be explored in the data.
