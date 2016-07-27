@@ -122,6 +122,8 @@ length(which(dog$match == "yes"))/15595
 
 length(which(dog$OutcomeType == "Adoption"))/15595
 
+dog$predictionold<-predict(mod1, dog)
+
 ###now do the cats!!
 ###cat pure versus mix
 cat$pure<-"yes"
