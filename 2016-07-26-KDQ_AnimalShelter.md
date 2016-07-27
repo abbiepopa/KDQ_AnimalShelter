@@ -12,7 +12,7 @@ For this dataset, kaggle asks that you predict which dogs and cats will have eac
 The first decision I made was that separate models were necessary for dogs and cats, given that they are literally different animals. It is definitely not necessary that dogs and cats would have the same predictors.
 <br><br>
 ![Ripley](https://github.com/davisincubator/davisincubator.github.io/blob/master/images/projects/blog/abbie/Ripley.jpg){: .center-image }
->We adopted our cat, Ripley, from a local shelter
+>We adopted our cat, Ripley, from a local shelter.
 <br><br>
 A quick examination of the data yields a few important findings for preprocessing. First, there are 1380 dog breeds alone. This is far too many categories to be useful for a model. Based on real world experience I rebinned the breeds as dogs who were pit bulls, dogs who were mutts, and dogs who were pure bred. In the final model I tested the prediction power of being identified as a mutt and as a pit bull and only pit bull significantly increased AIC of the model. In fact, being a pit bull was the strongest predictor in my data set. With pit bulls much more likely to receive euthanasia and much less likely to be adopted. This is an actionable insight from these data. Perhaps shelters could organize educational endeavors to reduce the stigma associated with pit bulls. Or offer potential owners obedience training for their pit bulls.
 <br><br>
