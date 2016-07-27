@@ -17,3 +17,22 @@ A quick examination of the data yields a few important findings for preprocessin
 <br><br>
 //picture of an adoptable pit bull at YCAS
 <br><br>
+Similarly, for sex of tha animals there are six levels. However, each string provides two pieces of information. First, whether the animal is male or female, ansecond whether they are spayed/neutered or intact. In order to capture both of these dichotomies I split the data from this field into two fields, one for the sex of the animal and one for their reproductive status. 
+<br><br>
+//picture of a dog with a really girly or manly outfit
+<br><br>
+Next, in the case of age the information is given in a not particularly useful manner (i.e., "3 years" or "2 weeks"). For this project I grouped this into categories of infant, puppy, etc. I would like to redo this analysis at some point looking at continuous age to see which is more effective. Before checking I though categories might be more predictive as many shelters and website list animals in this way rather than giving exact ages, but it would be good to check to be sure. I coded this as an ordinal variable, on the assumption that puppies were the most often adopted and senior dogs the least often adopted.
+<br><br>
+Finally, I recoded color in a similar manner to breed. Color initially had 366 levels, and I recoded it down to five including "multi." 
+<br><br>
+From here, I checked if each predictor alone was significantly associated with the outcome types. Since all were, I iteratively added them to my multinomial logistic regression model and checked that each addition significantly increased the AIC of the model. The final model included pit bull status, sex, reproductive status, and age. A few noteworthy things, first, all outcomes are not equally likely. Perhaps fortunately, adoption is the most likely outcome with 42% of dogs getting adopted. Second, though age is not particularly more informative from a strict AIC point of view than the other predictors, it greatly enriches the possible outcomes. Without age, the confusion matrix (rows are predicted outcomes, columns are actual outcomes) looks like this:
+<br><br>
+//confusion matrix without age
+<br><br>
+Note that an ideal confusion matrix will have the heaviest weights along the diagonal. However, when we add age, the confusion matrix looks like this:
+<br><br>
+//confusion matrix for mod2
+<br><br>
+Notice how age allows our model to predict a far richer set of outcomes than the other factors alone.
+<br><br>
+Advice I would give a shelter based on this model. First, as I have already stated, is the value of finding a way to get pit bulls adopted. This could include education for owners to destigmatize the pit bulls, or obedience training for the dogs themselves. Second, since spayed and neutered animals are more likely to be adopted investing in spaying and neutering programs for the animals would be a worthwhile endeavor. If it results in more adoptions the costs could ultimately save the shelter money, as they would make more money in adoption fees. Finally, it would be so helpful for the shelter to find some way to move the elderly animals. I wonder if certain demographics of people (older individuals) would also be interested in older, more mellow dogs. 
