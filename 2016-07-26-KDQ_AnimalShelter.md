@@ -28,11 +28,11 @@ Finally, I recoded color in a similar manner to breed. Color initially had 366 l
 <br><br>
 From here, I checked if each predictor alone was significantly associated with the outcome types. Since all were, I iteratively added them to my multinomial logistic regression model and checked that each addition significantly increased the AIC of the model. The final model included pit bull status, sex, reproductive status, and age. A few noteworthy things, first, all outcomes are not equally likely. Perhaps fortunately, adoption is the most likely outcome with 42% of dogs getting adopted. Second, though age is not particularly more informative from a strict AIC point of view than the other predictors, it greatly enriches the possible outcomes. Without age, the outcome matrix (rows are predicted outcomes, columns are actual outcomes) looks like this:
 <br><br>
-[noage](https://github.com/davisincubator/davisincubator.github.io/blob/master/images/projects/blog/abbie/dog_no_age.png){: .center-image }
+![noage](https://github.com/davisincubator/davisincubator.github.io/blob/master/images/projects/blog/abbie/dog_no_age.png){: .center-image }
 <br><br>
 Note that an ideal outcome matrix will have the heaviest weights along the diagonal. However, when we add age, the outcome matrix looks like this:
 <br><br>
-[age](https://github.com/davisincubator/davisincubator.github.io/blob/master/images/projects/blog/abbie/dog_with_age.png){: .center-image }
+![age](https://github.com/davisincubator/davisincubator.github.io/blob/master/images/projects/blog/abbie/dog_with_age.png){: .center-image }
 <br><br>
 Notice how age allows our model to predict a far richer set of outcomes than the other factors alone.
 <br><br>
@@ -40,7 +40,7 @@ Advice I would give a shelter based on this model. First, as I have already stat
 <br><br>
 As a final note, splitting the data into dogs and cats allowed for an obvious test of my initial hypothesis, which was that dogs and cats would require different models for good prediction power. A quick outcome matrix when applying this method to cats (though cats could only be classified as mutt or pure bred, not pit bulls) yields this:
 <br><br>
-[cat](https://github.com/davisincubator/davisincubator.github.io/blob/master/images/projects/blog/abbie/cat.png){: center-image }
+![cat](https://github.com/davisincubator/davisincubator.github.io/blob/master/images/projects/blog/abbie/cat.png){: center-image }
 <br><br>
 There is definitely explanatory power lacking when applying the dog model to cats. In the future, I will need to build an appropriate model for predicting outcomes of cats. This is also relevant to shelters, in that they should not assume that dogs and cats are similar. For example, it may be that older cats don't suffer as much as older dogs. This remains to be explored in the data.
 <br><br>
